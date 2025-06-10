@@ -321,6 +321,7 @@ Address: 52.123.45.67
 ```bash
 curl -O https://raw.githubusercontent.com/IBM/ibm-event-automation/main/event-streams/cr-examples/eventstreams/kubernetes/development.yaml
 ```
+More configuration for different environemnts can be found here - https://github.com/IBM/ibm-event-automation/tree/main/event-streams/cr-examples/eventstreams/kubernetes
 
 Edit the `development.yaml` file and update the host with your external IP using nip.io:
 ```yaml
@@ -399,7 +400,8 @@ openssl s_client -connect kafka-bootstrap.eventstreams.<external-ip>.nip.io:443 
 ```
 
 ### View the Admin Dashboard 
-Navigate to `https://eventstreams-ui.<external-ip>.nip.io/`
+The hostname can be retrieved from the event streams configuration yaml file
+Navigate to `https://adminui.<external-ip>.nip.io/`
 
 Enter username `es-admin` and password from the Create Admin section.
 
